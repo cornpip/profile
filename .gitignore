@@ -1,0 +1,10 @@
+# Generated artifacts
+/tmp/
+/output/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+
+# Local screenshots and ad-hoc captures
+/*.png

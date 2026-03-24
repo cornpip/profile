@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile | cornpip</title>
+    <meta
+      name="description"
+      content="최선효의 소개와 프로젝트 이력을 담은 포트폴리오 페이지"
+    />
+    <link rel="icon" href="assets/icons/favicon.ico" sizes="any" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Noto+Serif+KR:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-grain" aria-hidden="true"></div>
+    <div class="page-glow page-glow-1" aria-hidden="true"></div>
+    <div class="page-glow page-glow-2" aria-hidden="true"></div>
+
+    <div class="topbar container">
+      <button
+        class="lang-toggle"
+        id="langToggle"
+        type="button"
+        aria-label="Switch language"
+      >
+        <span class="lang-toggle-label">KO</span>
+        <span class="lang-toggle-separator">/</span>
+        <span>EN</span>
+      </button>
+    </div>
+
+    <header class="hero container reveal">
+      <div class="hero-rule" aria-hidden="true"></div>
+      <p class="eyebrow" id="eyebrow"></p>
+      <h1 id="heroTitle"></h1>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary" id="heroProjectsLink"></a>
+        <a href="#contact" class="btn btn-ghost" id="heroContactLink"></a>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="page-layout">
+        <div class="page-content">
+          <section id="about" class="panel reveal">
+            <h2 id="aboutHeading"></h2>
+            <div class="about-layout">
+              <figure class="profile-card">
+                <img
+                  src="assets/profile/profile.jpg"
+                  alt="최선효 프로필 사진"
+                  id="profileImage"
+                  class="profile-image"
+                  onerror="this.style.display='none';this.nextElementSibling.style.display='grid';"
+                />
+                <div class="profile-placeholder" style="display: none" aria-hidden="true">PHOTO</div>
+                <figcaption>
+                  <strong id="profileName"></strong>
+                  <span id="profileRole"></span>
+                </figcaption>
+              </figure>
+
+              <div class="about-content">
+                <p class="hero-lead" id="heroLead"></p>
+                <p class="hero-description" id="heroDescription"></p>
+                <p id="aboutDescription"></p>
+                <ul class="about-list" id="aboutList"></ul>
+                <div class="hero-highlights" id="heroHighlights"></div>
+              </div>
+            </div>
+          </section>
+
+          <section id="projects" class="reveal">
+            <div class="section-heading">
+              <h2 id="projectsHeading"></h2>
+              <p class="section-copy" id="projectsIntro"></p>
+            </div>
+            <div class="timeline" id="projectsTimeline"></div>
+          </section>
+
+          <section id="contact" class="panel reveal">
+            <h2 id="contactHeading"></h2>
+            <p id="contactDescription"></p>
+            <div class="contact-grid">
+              <a href="mailto:cornpip7777@gmail.com">Email</a>
+              <a href="https://github.com/cornpip" target="_blank" rel="noreferrer">GitHub</a>
+              <a href="https://www.linkedin.com/in/seonhyo-choi-62a48a263" target="_blank" rel="noreferrer"
+                >LinkedIn</a
+              >
+              <a href="https://cornpip.tistory.com/" target="_blank" rel="noreferrer">Blog</a>
+            </div>
+          </section>
+        </div>
+
+        <aside class="page-index" aria-label="Archive index">
+          <div class="page-index-inner">
+            <p class="page-index-title" id="archiveIndexTitle"></p>
+            <nav class="archive-nav" id="archiveNav"></nav>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="container footer">
+      <p id="footerText"></p>
+    </footer>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <button class="lightbox-close" id="lightboxClose" type="button" aria-label="닫기">×</button>
+      <button class="lightbox-nav prev" id="lightboxPrev" type="button" aria-label="이전 이미지">‹</button>
+      <figure class="lightbox-figure">
+        <img id="lightboxImage" alt="프로젝트 이미지 크게 보기" />
+        <figcaption class="lightbox-indicator" id="lightboxIndicator">1 / 1</figcaption>
+      </figure>
+      <button class="lightbox-nav next" id="lightboxNext" type="button" aria-label="다음 이미지">›</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
