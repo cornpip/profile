@@ -6,7 +6,7 @@ const translations = {
     eyebrow: "AI SOFTWARE ENGINEER",
     heroTitle: "기술과 비즈니스를<br />잇는 엔지니어입니다.",
     heroLead:
-      "Computer Vision Engineer로서 데이터 설계부터 모델 개발, 추론 파이프라인, 애플리케이션 구현까지 End-to-End로 수행해왔습니다.",
+      "Computer Vision Engineer로 데이터 설계부터 모델 개발, 추론 파이프라인, 애플리케이션 구현까지 End-to-End로 수행해왔습니다.",
     heroDescription:
       "AI Agent에도 많은 관심을 두고, workflow 설계, 에이전트 역할 구성, 스킬 활용 등 다양한 실험을 개발에 적용하고 있습니다.",
     heroHighlights: [
