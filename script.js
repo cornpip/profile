@@ -6,7 +6,7 @@ const translations = {
     eyebrow: "AI SOFTWARE ENGINEER",
     heroTitle: "기술과 비즈니스를<br />잇는 엔지니어입니다.",
     heroLead:
-      "AI·Computer Vision 프로젝트를 수행하며, 데이터 설계부터 모델 개발, 추론 파이프라인, 애플리케이션 구현까지 End-to-End로 맡아온 엔지니어입니다.",
+      "Computer Vision Engineer로서 데이터 설계부터 모델 개발, 추론 파이프라인, 애플리케이션 구현까지 End-to-End로 수행해왔습니다.",
     heroDescription:
       "AI Agent에도 많은 관심을 두고, workflow 설계, 에이전트 역할 구성, 스킬 활용 등 다양한 실험을 개발에 적용하고 있습니다.",
     heroHighlights: [
@@ -24,7 +24,7 @@ const translations = {
     archiveIndexTitle: "Archive",
     aboutHeading: "소개",
     profileName: "최선효",
-    profileRole: "AI Software Engineer",
+    profileRole: "Computer Vision Engineer",
     aboutDescription: "",
     aboutItems: [
       ["주요 스킬", "Flutter, Android, C++, Pytorch, Tensorflow, Spring, React"],
@@ -274,7 +274,7 @@ const translations = {
     eyebrow: "AI SOFTWARE ENGINEER",
     heroTitle: "An engineer working across technology and business.",
     heroLead:
-      "I am an engineer who has worked end to end across AI and computer vision projects, from data design and model development to inference pipelines and application implementation.",
+      "As a Computer Vision Engineer, I have worked end to end across data design, model development, inference pipelines, and application implementation.",
     heroDescription:
       "I am also highly interested in AI agents and continue experimenting with workflow design, sub-agent composition, and skill usage to apply them in development.",
     heroHighlights: [
@@ -292,7 +292,7 @@ const translations = {
     archiveIndexTitle: "Archive",
     aboutHeading: "About",
     profileName: "Seonhyo Choi",
-    profileRole: "AI Software Engineer",
+    profileRole: "Computer Vision Engineer",
     aboutDescription: "",
     aboutItems: [
       ["Core Skills", "Flutter, Android, C++, DL frameworks (PyTorch, TensorFlow), Spring"],
