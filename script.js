@@ -27,7 +27,7 @@ const translations = {
     profileRole: "Computer Vision Engineer",
     aboutDescription: "",
     aboutItems: [
-      ["주요 스킬", "Flutter, Android, C++, Pytorch, Tensorflow, Spring, React"],
+      ["주요 스킬", "Flutter, Android, C++, Camera"],
       ["강점", "카메라·영상 처리, 스마트폰 온디바이스AI, AI 파이프라인·모델 설계"],
       ["업무 방식", "제품 오너십, 데이터·시각화 기반 논의, 반복 작업 모듈화"],
     ],
@@ -295,7 +295,7 @@ const translations = {
     profileRole: "Computer Vision Engineer",
     aboutDescription: "",
     aboutItems: [
-      ["Core Skills", "Flutter, Android, C++, DL frameworks (PyTorch, TensorFlow), Spring"],
+      ["Core Skills", "Flutter, Android, C++, Camera"],
       ["Strengths", "Camera and image processing, smartphone on-device AI, AI pipeline and model design"],
       ["Work Style", "Product ownership, data- and visualization-based discussion, modularizing repetitive work"],
     ],
@@ -574,7 +574,7 @@ const lightboxPrev = document.getElementById("lightboxPrev");
 const lightboxNext = document.getElementById("lightboxNext");
 let activeImages = [];
 let activeIndex = 0;
-let currentLanguage = localStorage.getItem("portfolio-language") || "ko";
+let currentLanguage = localStorage.getItem("portfolio-language") || "en";
 let detailsStateBeforePrint = [];
 let archiveSections = [];
 
@@ -1042,7 +1042,7 @@ const restoreOpenTimelineSections = (openIds) => {
 };
 
 const setLanguage = (language) => {
-  const nextLanguage = translations[language] ? language : "ko";
+  const nextLanguage = translations[language] ? language : "en";
   const copy = translations[nextLanguage];
   const openTimelineSectionIds = getOpenTimelineSectionIds();
   currentLanguage = nextLanguage;
