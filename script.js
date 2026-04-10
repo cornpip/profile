@@ -2,13 +2,15 @@ const translations = {
   ko: {
     htmlLang: "ko",
     pageTitle: "Profile | cornpip",
-    metaDescription: "최선효의 소개와 프로젝트 이력을 담은 포트폴리오 페이지",
+    metaDescription: "프로필",
     eyebrow: "AI SOFTWARE ENGINEER",
     heroTitle: "기술과 비즈니스를<br />잇는 엔지니어입니다.",
     heroLead:
-      "Computer Vision Engineer로 데이터 설계부터 모델 개발, 추론 파이프라인, 애플리케이션 구현까지 End-to-End로 수행해왔습니다.",
-    heroDescription:
-      "AI Agent에도 많은 관심을 두고, workflow 설계, 에이전트 역할 구성, 스킬 활용 등 다양한 실험을 개발에 적용하고 있습니다.",
+      "사용자에게 명확한 가치를 제공할 때 가장 큰 동기를 느낍니다.",
+    heroDescription: [
+      "시스템과 아키텍처를 이해하고 설계하며, 데이터 설계부터 모델 개발, 추론 파이프라인, 애플리케이션 구현까지 End-to-End로 개발해왔습니다.",
+      "AI Agent와 관련해서도 workflow 설계, 에이전트 역할 구성, 스킬 활용 등 개발에 적용하고 있습니다.",
+    ],
     heroHighlights: [
       "오너십",
       "조직 문화에 적극적",
@@ -270,13 +272,15 @@ const translations = {
   en: {
     htmlLang: "en",
     pageTitle: "Profile | cornpip",
-    metaDescription: "Portfolio page presenting Seonhyo Choi's background and projects",
+    metaDescription: "Profile",
     eyebrow: "AI SOFTWARE ENGINEER",
     heroTitle: "An engineer working across technology and business.",
     heroLead:
-      "As a Computer Vision Engineer, I have worked end to end across data design, model development, inference pipelines, and application implementation.",
-    heroDescription:
-      "I am also highly interested in AI agents and continue experimenting with workflow design, sub-agent composition, and skill usage to apply them in development.",
+      "I am most motivated when building things that deliver clear value to users.",
+    heroDescription: [
+      "I work end to end across system and architecture design, covering data design, model development, inference pipelines, and application implementation.",
+      "I also bring AI agent ideas into development, including workflow design, agent role composition, and skill usage.",
+    ],
     heroHighlights: [
       "Ownership",
       "Culture contribution",
@@ -1059,8 +1063,18 @@ const setLanguage = (language) => {
   elements.eyebrow.textContent = copy.eyebrow;
   elements.heroTitle.innerHTML = copy.heroTitle;
   elements.heroLead.textContent = copy.heroLead;
-  elements.heroDescription.textContent = copy.heroDescription;
-  elements.heroDescription.hidden = !copy.heroDescription;
+  elements.heroDescription.replaceChildren();
+  const heroDescriptionParagraphs = Array.isArray(copy.heroDescription)
+    ? copy.heroDescription
+    : copy.heroDescription
+      ? [copy.heroDescription]
+      : [];
+  heroDescriptionParagraphs.forEach((paragraph) => {
+    const p = document.createElement("p");
+    p.textContent = paragraph;
+    elements.heroDescription.appendChild(p);
+  });
+  elements.heroDescription.hidden = heroDescriptionParagraphs.length === 0;
   elements.heroProjectsLink.textContent = copy.heroProjectsLink;
   elements.heroContactLink.textContent = copy.heroContactLink;
   if (elements.archiveIndexTitle) {
