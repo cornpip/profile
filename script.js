@@ -4,7 +4,7 @@ const translations = {
     pageTitle: "Profile | cornpip",
     metaDescription: "프로필",
     eyebrow: "AI SOFTWARE ENGINEER",
-    heroTitle: "기술과 비즈니스를<br />잇는 엔지니어입니다.",
+    heroTitle: "기술과 비즈니스를 <br />잇는 엔지니어입니다.",
     heroLead:
       "사용자에게 명확한 가치를 제공할 때 가장 큰 동기를 느낍니다.",
     heroDescription: [
