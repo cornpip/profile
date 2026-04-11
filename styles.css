@@ -985,6 +985,12 @@ h2 {
   }
 }
 
+@media (max-width: 500px) {
+  html[lang="ko"] .hero h1 br {
+    display: none;
+  }
+}
+
 @page {
   size: A4;
   margin: 12mm;
