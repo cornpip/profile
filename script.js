@@ -1,274 +1,4 @@
 const translations = {
-  ko: {
-    htmlLang: "ko",
-    pageTitle: "Profile | cornpip",
-    metaDescription: "프로필",
-    eyebrow: "AI SOFTWARE ENGINEER",
-    heroTitle: "기술과 비즈니스를 <br />잇는 엔지니어입니다.",
-    heroLead:
-      "사용자에게 명확한 가치를 제공할 때 가장 큰 동기를 느낍니다.",
-    heroDescription: [
-      "시스템과 아키텍처를 이해하고 설계하며, 데이터 설계부터 모델 개발, 추론 파이프라인, 애플리케이션 구현까지 End-to-End로 개발해왔습니다.",
-      "AI Agent와 관련해서도 workflow 설계, 에이전트 역할 구성, 스킬 활용 등 개발에 적용하고 있습니다.",
-    ],
-    heroHighlights: [
-      "오너십",
-      "조직 문화에 적극적",
-      "빠른 실행",
-      "데이터 기반 문제 정의",
-      "computer vision",
-      "end-to-end",
-      "product engineer",
-      "ai native",
-    ],
-    heroProjectsLink: "프로젝트 보기",
-    heroContactLink: "연락하기",
-    archiveIndexTitle: "Archive",
-    aboutHeading: "소개",
-    profileName: "최선효",
-    profileRole: "Computer Vision Engineer",
-    aboutDescription: "",
-    aboutItems: [
-      ["주요 스킬", "Flutter, Android, C++, Camera"],
-      ["강점", "카메라·영상 처리, 스마트폰 온디바이스AI, AI 파이프라인·모델 설계"],
-      ["업무 방식", "제품 오너십, 데이터·시각화 기반 논의, 반복 작업 모듈화"],
-    ],
-    projectsHeading: "프로젝트",
-    projectsIntro: "",
-    personalProjectsHeading: "사이드 프로젝트",
-    contactHeading: "연락하기",
-    contactDescription: "협업 제안이나 프로젝트 문의는 아래 채널로 연락 주세요.",
-    footerText: "Copyright © 2026 cornpip",
-    lightboxClose: "닫기",
-    lightboxPrev: "이전 이미지",
-    lightboxNext: "다음 이미지",
-    lightboxImageAlt: "프로젝트 이미지 크게 보기",
-    galleryImageAlt: "프로젝트 이미지 {index}",
-    galleryFallback: "이미지 {index}",
-    galleryMissingLabel: "VISUAL UNAVAILABLE",
-    galleryMissingMeta: "Internal asset pending",
-    projects: [
-      {
-        year: "2025",
-        sortOrder: 1,
-        period: "2025.10 -",
-        team: "헬스클라우드(주)",
-        title: "Capillaries",
-        description:
-          "손톱 모세혈관 분석 앱을 개발했습니다. 광학 기기 연동부터 이미지 취득, 전처리, AI 추론까지 전 과정을 스마트폰 온디바이스 AI로 구현했습니다.",
-        bullets: [
-          "WebSocket 기반 기기 제어와 MJPEG 프리뷰·캡처로 광학 기기 연동 흐름을 앱에서 처리",
-          "취득 이미지 전처리와 TFLite 추론 파이프라인을 연결해 분석 흐름을 온디바이스로 구성",
-          "Flutter에서 공통으로 활용할 수 있는 FFI 기반 이미지·텐서 처리 패키지를 별도로 개발",
-          "YOLO·PyTorch 기반 모델을 TFLite로 변환하고, 백본·하이퍼파라미터·양자화 수준 조정으로 성능 저하를 보완",
-        ],
-        media: [
-          "assets/projects/Capillaries/1.png",
-          "assets/projects/Capillaries/2.png",
-        ],
-      },
-      {
-        year: "2025",
-        sortOrder: 2,
-        period: "2025.07 - 2026.02",
-        team: "헬스클라우드(주)",
-        title: "POD",
-        description:
-          "RF·EMS 뷰티기기와 연동되는 피부 분석 앱을 개발했습니다. 온디바이스 AI 기반 얼굴 부위 추출과 피부 상태 분석 모델을 앱에 구현했습니다.",
-        bullets: [
-          "BLE 연동으로 앱과 뷰티기기 사용 흐름 연결",
-          "얼굴 랜드마크 기반으로 이마·눈가·볼·입술 영역을 추출해 부위별 분석 파이프라인 구성",
-          "부위별 전처리와 AI 추론을 적용해 주름·수분 상태 분석 기능 제공",
-        ],
-        media: ["assets/projects/POD/1.png", "assets/projects/POD/2.png"],
-      },
-      {
-        year: "2025",
-        sortOrder: 5,
-        period: "2025.01 - 2025.11",
-        team: "헬스클라우드(주)",
-        title: "Bellus",
-        description:
-          "피부·두피 분석 앱을 개발했습니다. 5가지 피부 항목에 대한 AI 모델을 설계하고, 제한된 데이터와 불균형 분포를 고려한 학습 전략으로 모델을 학습했습니다.",
-        bullets: [
-          "ResNet 분류 모델과 UNet 분할 모델을 설계·학습해 피부 분석 모델 개발",
-          "YOLO 모델로 모공을 검출하고 분할 모델로 모발 영역을 분리해 두께 분석 기능 구현",
-          "MethodChannel 기반 네이티브 기능 제어와 Wi-Fi·셀룰러 전환 로직으로 네트워크 제약 대응",
-          "SQLite 기반 고객 관리 및 분석 히스토리 기능 구현",
-        ],
-        media: [
-          "assets/projects/Bellus/1.png",
-          "assets/projects/Bellus/2.png",
-          "assets/projects/Bellus/3.png",
-        ],
-      },
-      {
-        year: "2024",
-        period: "2024.09 - 2025.02",
-        team: "헬스클라우드(주)",
-        title: "CNear Hello Check",
-        description:
-          "스마트폰 기반 얼굴 인식 등·하원 관리 서비스를 개발했습니다.",
-        bullets: [
-          "ML Kit 기반 얼굴 ROI 검출로 스마트폰 얼굴 인식 파이프라인 구성",
-          "MobileFaceNet 임베딩 벡터를 추출해 서버로 전송하고, DB에 저장된 벡터값과 비교해 사용자 식별 처리",
-          "세션 인증, 역할별 접근 제어, API 설계로 서비스 운영 구조 구성",
-        ],
-        media: ["assets/projects/CNear Hello Check/1.png", "assets/projects/CNear Hello Check/2.png"],
-      },
-      {
-        year: "2024",
-        period: "2024.09 - 2024.11",
-        team: "헬스클라우드(주)",
-        title: "포트홀 관리 솔루션",
-        description:
-          "차량에서 수집하는 포트홀 데이터를 서버에서 처리하고, 행정구역 단위로 시각화하는 대시보드를 개발했습니다.",
-        bullets: [
-          "포트홀 데이터 처리 서버를 개발해 저장부터 시각화까지 이어지는 데이터 흐름 구성",
-          "GIS 시각화 기반 대시보드로 운영 가시성을 개선하고, 확대 수준에 따라 행정구역 단위로 데이터를 집계",
-        ],
-        media: ["assets/projects/포트홀 관리 솔루션/1.png", "assets/projects/포트홀 관리 솔루션/2.png"],
-      },
-      {
-        year: "2024",
-        period: "2024.04 - 2024.05",
-        team: "(주)키웍스",
-        title: "김 이물 검사",
-        description:
-          "이물 검출 모델 학습을 위한 데이터셋 구성과 검증 전략을 설계했습니다.",
-        bullets: [
-          "이물 유형 분포와 조명 조건을 고려한 데이터셋 설계",
-          "전처리 조합별 학습·검증·테스트",
-        ],
-        media: ["assets/projects/김 이물 검사/1.png", "assets/projects/김 이물 검사/2.png"],
-      },
-      {
-        year: "2023",
-        period: "2023.10 - 2023.12",
-        team: "헬스클라우드(주)",
-        title: "생성형 AI 솔루션",
-        description:
-          "반려동물 이미지 생성 워크플로우와 서빙 서버를 구축해 서비스로 제공했습니다.",
-        bullets: [
-          "ComfyUI 워크플로우를 Spring 서버로 중계하고, 멀티 클라이언트 처리·스케줄링 기능을 구현해 서비스 흐름 구성",
-          "LoRA 기반 스타일 학습으로 작가 고유 화풍 재현",
-        ],
-        media: [
-          "assets/projects/생성형 AI 솔루션/1.jpg",
-          "assets/projects/생성형 AI 솔루션/2.jpg",
-          "assets/projects/생성형 AI 솔루션/3.jpg",
-        ],
-      },
-      {
-        year: "2022",
-        period: "2022.09 - 2022.12",
-        team: "(주)넥스트랩",
-        title: "Btv UI 탐색 알고리즘 고도화",
-        description:
-          "분류 모델로 탐색 알고리즘을 고도화하고, UI 탐색 경로를 시각화해 오탐을 분석했습니다.",
-        bullets: [
-          "ResNet 분류 모델을 학습해 UI 탐색 알고리즘에 적용",
-          "탐색 과정의 노드 간 데이터를 정의하고 React·D3.js로 경로를 시각화해 오탐 분석",
-          "Class Activation Map(CAM)으로 화면 분류 근거를 확인하며 오분류 원인을 분석하고 모델 개선",
-        ],
-        media: ["assets/projects/Btv UI 탐색 경로 시각화/1.jpg", "assets/projects/Btv UI 탐색 경로 시각화/2.png"],
-      },
-      {
-        year: "2021",
-        period: "2021.08 - 2021.11",
-        team: "공모전",
-        title: "이 길 맞는교",
-        description:
-          "AR 기반 운전 경로 안내 안드로이드 앱을 출시했습니다.",
-        bullets: [
-          "Mapbox Vision SDK 분석·적용과 차선·신호등 인식 R&D",
-          "지역XR챌린지 장려상 수상",
-        ],
-        media: [
-          "assets/projects/이 길 맞는교/1.jpg",
-          "assets/projects/이 길 맞는교/2.jpg",
-        ],
-      },
-    ],
-    personalProjects: [
-      {
-        year: "2025",
-        sortKey: "2025-12",
-        sortOrder: 3,
-        period: "2025.12 - 2026.01",
-        team: "사이드 프로젝트",
-        title: "mediapipe_face_mesh",
-        description:
-          "MediaPipe Face Mesh 모델로 얼굴 랜드마크를 추출하는 Flutter 패키지를 개발했습니다.",
-        bullets: [
-          "FFI Plugin 구조로 패키지를 설계하고 주요 연산을 C++로 처리",
-          "Android·iOS용 TFLite 바이너리를 직접 빌드하고, 필요한 C API 헤더·구현을 선별 반영해 모델 추론을 C++ 레이어에서 실행",
-          "pub.dev 공개 및 iOS/Android 지원",
-        ],
-        link: "https://github.com/cornpip/mediapipe_face_mesh",
-        linkLabel: "GitHub 보기",
-        media: ["assets/projects/mediapipe_face_mesh/1.png", "assets/projects/mediapipe_face_mesh/2.png"],
-      },
-      {
-        year: "2025",
-        sortKey: "2025-08",
-        sortOrder: 4,
-        period: "2025.08",
-        team: "사이드 프로젝트",
-        title: "Mediapipe Landmark 3D Viewer",
-        description:
-          "랜드마크 포인트를 직관적으로 확인할 수 있는 3D 인터랙션 기반 시각화 뷰어를 개발했습니다.",
-        bullets: [
-          "랜드마크 번호로 위치를 찾거나 위치로 번호를 확인 가능",
-          "Face Mesh 활용 시 포인트 구조를 직관적으로 확인하는 보조 도구로 활용",
-        ],
-        link: "https://github.com/cornpip/mediapipe_landmark_viewer",
-        linkLabel: "GitHub 보기",
-        media: ["assets/projects/Mediapipe Landmark 3D Viewer/1.png", "assets/projects/Mediapipe Landmark 3D Viewer/2.png"],
-      },
-      {
-        year: "2024",
-        sortKey: "2024-12",
-        period: "2024.12 - 2025.07",
-        team: "사이드 프로젝트",
-        title: "TokenMeter",
-        description:
-          "OpenAI API를 활용해 로컬에서 ChatGPT처럼 사용할 수 있는 Docker 기반 시스템을 구현했습니다.",
-        bullets: [
-          "대화 내역을 로컬에 저장하고 히스토리별 토큰 사용량을 노출",
-          "웹 링크 입력 시 페이지를 크롤링하고 BART 모델로 요약 반영",
-          "SAM2 마스크 생성과 OpenAI Inpainting API를 연결한 편집 기능 구현",
-        ],
-        link: "https://github.com/cornpip/TokenMeter",
-        linkLabel: "GitHub 보기",
-        media: [
-          "assets/projects/TokenMeter/1.png",
-          "assets/projects/TokenMeter/2.png",
-          "assets/projects/TokenMeter/3.png",
-        ],
-      },
-      {
-        year: "2022",
-        sortKey: "2022-03",
-        period: "2022.03 - 2022.06",
-        team: "캡스톤",
-        title: "운전자 폭행 감지",
-        description:
-          "차량 내부의 일반·폭행·결제 3가지 상황 데이터셋을 구축하고, MMAction2를 사용해 PoseC3D 모델을 학습·서빙했습니다.",
-        bullets: [
-          "MMAction2 프레임워크를 활용해 Faster R-CNN, HRNet, PoseC3D 순의 추론 파이프라인 구현",
-          "라즈베리파이와 소켓 통신으로 연속 프레임을 수신하고, 서버에서 이미지 큐를 관리해 일정 프레임 단위 추론 처리",
-          "ICT 대학생 논문경진대회 장려상 수상",
-        ],
-        link: "https://github.com/cornpip/Action-Recognition",
-        linkLabel: "GitHub 보기",
-        media: [
-          "assets/projects/운전자 폭행 감지/1.png",
-          "assets/projects/운전자 폭행 감지/2.png",
-        ],
-      },
-    ],
-  },
   en: {
     htmlLang: "en",
     pageTitle: "Profile | cornpip",
@@ -296,10 +26,9 @@ const translations = {
     archiveIndexTitle: "Archive",
     aboutHeading: "About",
     profileName: "Seonhyo Choi",
-    profileRole: "Computer Vision Engineer",
+    profileRole: "Software Engineer | Computer Vision, On device AI, Flutter",
     aboutDescription: "",
     aboutItems: [
-      ["Core Skills", "Flutter, Android, C++, Camera"],
       ["Strengths", "Camera and image processing, smartphone on-device AI, AI pipeline and model design"],
       ["Work Style", "Product ownership, data- and visualization-based discussion, modularizing repetitive work"],
     ],
@@ -319,11 +48,11 @@ const translations = {
     galleryMissingMeta: "Internal asset pending",
     projects: [
       {
-        year: "2025",
+        year: "2026",
         sortOrder: 1,
-        period: "Oct 2025 -",
+        period: "2025 -",
         team: "HealthCloud",
-        title: "Capillaries",
+        title: "Nailfold Capillary Analysis with On-Device AI",
         description:
           "Developed a nailfold capillary analysis app, implementing the full flow on smartphone on-device AI from optical device integration to image acquisition, preprocessing, and AI inference.",
         bullets: [
@@ -332,17 +61,14 @@ const translations = {
           "Developed a separate FFI-based image and tensor processing package reusable across Flutter apps",
           "Converted YOLO and PyTorch-based models to TFLite and mitigated quality loss by adjusting the backbone, hyperparameters, and quantization level",
         ],
-        media: [
-          "assets/projects/Capillaries/1.png",
-          "assets/projects/Capillaries/2.png",
-        ],
+        media: ["assets/projects/Capillaries/1.png"],
       },
       {
         year: "2025",
         sortOrder: 2,
-        period: "Jul 2025 - Feb 2026",
+        period: "",
         team: "HealthCloud",
-        title: "POD",
+        title: "On-Device Skin Analysis for RF/EMS Beauty Devices",
         description:
           "Developed a skin analysis app connected to RF and EMS beauty devices, implementing on-device AI models for facial-region extraction and skin condition analysis.",
         bullets: [
@@ -353,11 +79,11 @@ const translations = {
         media: ["assets/projects/POD/1.png", "assets/projects/POD/2.png"],
       },
       {
-        year: "2025",
+        year: "2026",
         sortOrder: 5,
-        period: "Jan 2025 - Nov 2025",
+        period: "2025 -",
         team: "HealthCloud",
-        title: "Bellus",
+        title: "AI Skin and Scalp Analysis App",
         description:
           "Developed a skin and scalp analysis app. I designed AI models for five skin analysis categories and trained them with strategies tailored to limited and imbalanced data.",
         bullets: [
@@ -374,9 +100,9 @@ const translations = {
       },
       {
         year: "2024",
-        period: "Sep 2024 - Feb 2025",
+        period: "",
         team: "HealthCloud",
-        title: "CNear Hello Check",
+        title: "Face Recognition Attendance for Care Facilities",
         description:
           "Developed a smartphone-based face recognition attendance service.",
         bullets: [
@@ -388,7 +114,7 @@ const translations = {
       },
       {
         year: "2024",
-        period: "Sep 2024 - Nov 2024",
+        period: "",
         team: "HealthCloud",
         title: "Pothole Management Solution",
         description:
@@ -401,7 +127,7 @@ const translations = {
       },
       {
         year: "2024",
-        period: "Apr 2024 - May 2024",
+        period: "",
         team: "Keyworks",
         title: "Seaweed Foreign-Material Inspection",
         description:
@@ -414,9 +140,9 @@ const translations = {
       },
       {
         year: "2023",
-        period: "Oct 2023 - Dec 2023",
+        period: "",
         team: "HealthCloud",
-        title: "Generative AI Solution",
+        title: "Pet Portrait Generation Service for Illustrators",
         description:
           "Built a pet image generation workflow and serving stack and delivered it as a service.",
         bullets: [
@@ -431,7 +157,7 @@ const translations = {
       },
       {
         year: "2022",
-        period: "Sep 2022 - Dec 2022",
+        period: "",
         team: "NextLab",
         title: "Btv UI Navigation Algorithm Enhancement",
         description:
@@ -445,7 +171,7 @@ const translations = {
       },
       {
         year: "2021",
-        period: "Aug 2021 - Nov 2021",
+        period: "",
         team: "Competition Entry",
         title: "AR Driving Route Guide",
         description:
@@ -462,12 +188,32 @@ const translations = {
     ],
     personalProjects: [
       {
-        year: "2025",
-        sortKey: "2025-12",
-        sortOrder: 3,
-        period: "Dec 2025 - Jan 2026",
+        year: "2026",
+        sortKey: "2026-01",
+        sortOrder: 2,
+        period: "",
         team: "Side Project",
-        title: "mediapipe_face_mesh",
+        title: "Flutter Plugin for UVC Camera Access on Android",
+        description:
+          "Developed a Flutter FFI plugin that enables UVC camera access on Android via libuvc bindings, supporting live preview, frame capture, and camera control.",
+        bullets: [
+          "Bridged Android USB Host API, libusb, and libuvc across three layers to handle device discovery, USB communication, and UVC protocol",
+          "Implemented texture-based live preview to stream frames to Flutter widgets without excessive data copying",
+          "Exposed raw frame bytes to Dart for capture and image processing pipelines",
+          "Supported camera parameter control including focus, pan, tilt, and exposure, with stream diagnostics for FPS and dropped frames",
+          "Published on pub.dev with arm64-v8a, armeabi-v7a, and x86_64 ABI support",
+        ],
+        link: "https://pub.dev/packages/flutter_ffi_uvc",
+        linkLabel: "View pub.dev",
+        media: ["assets/projects/ffi_flutter_uvc/1.png"],
+      },
+      {
+        year: "2026",
+        sortKey: "2026-00",
+        sortOrder: 3,
+        period: "2025 -",
+        team: "Side Project",
+        title: "Flutter Package for On-Device Facial Landmark Extraction",
         description:
           "Developed a Flutter package for extracting facial landmarks with the MediaPipe Face Mesh model.",
         bullets: [
@@ -475,15 +221,15 @@ const translations = {
           "Built Android and iOS TFLite binaries directly, then selectively adapted the required C API headers and implementations to run model inference in the C++ layer",
           "Published on pub.dev with iOS and Android support",
         ],
-        link: "https://github.com/cornpip/mediapipe_face_mesh",
-        linkLabel: "View GitHub",
-        media: ["assets/projects/mediapipe_face_mesh/1.png", "assets/projects/mediapipe_face_mesh/2.png"],
+        link: "https://pub.dev/packages/mediapipe_face_mesh",
+        linkLabel: "View pub.dev",
+        media: ["assets/projects/mediapipe_face_mesh/1.png"],
       },
       {
         year: "2025",
         sortKey: "2025-08",
         sortOrder: 4,
-        period: "Aug 2025",
+        period: "",
         team: "Side Project",
         title: "Mediapipe Landmark 3D Viewer",
         description:
@@ -499,9 +245,9 @@ const translations = {
       {
         year: "2024",
         sortKey: "2024-12",
-        period: "Dec 2024 - Jul 2025",
+        period: "",
         team: "Side Project",
-        title: "TokenMeter",
+        title: "Self-Hosted OpenAI Chat with Token Tracking and AI Editing",
         description:
           "Implemented a Docker-based system that lets users work with the OpenAI API locally in a ChatGPT-like flow.",
         bullets: [
@@ -514,13 +260,12 @@ const translations = {
         media: [
           "assets/projects/TokenMeter/1.png",
           "assets/projects/TokenMeter/2.png",
-          "assets/projects/TokenMeter/3.png",
         ],
       },
       {
         year: "2022",
         sortKey: "2022-03",
-        period: "Mar 2022 - Jun 2022",
+        period: "",
         team: "Capstone",
         title: "Driver Assault Detection",
         description:
@@ -565,7 +310,6 @@ const elements = {
   contactHeading: document.getElementById("contactHeading"),
   contactDescription: document.getElementById("contactDescription"),
   footerText: document.getElementById("footerText"),
-  langToggle: document.getElementById("langToggle"),
 };
 
 const year = new Date().getFullYear();
@@ -578,7 +322,7 @@ const lightboxPrev = document.getElementById("lightboxPrev");
 const lightboxNext = document.getElementById("lightboxNext");
 let activeImages = [];
 let activeIndex = 0;
-let currentLanguage = localStorage.getItem("portfolio-language") || "en";
+const currentLanguage = "en";
 let detailsStateBeforePrint = [];
 let archiveSections = [];
 
@@ -655,6 +399,13 @@ const createMediaGallery = (project, copy) => {
       img.loading = "lazy";
       img.src = mediaPath;
       img.addEventListener("error", () => {
+        const ext = img.src.split(".").pop()?.toLowerCase();
+        const fallback = ext === "png" ? "jpg" : ext === "jpg" ? "png" : null;
+        if (fallback && !img.dataset.triedFallback) {
+          img.dataset.triedFallback = "1";
+          img.src = img.src.replace(/\.[^.]+$/, `.${fallback}`);
+          return;
+        }
         slot.classList.add("is-placeholder");
         slot.innerHTML = `<span class="project-image-placeholder-label">${copy.galleryMissingLabel}</span><span class="project-image-placeholder-meta">${copy.galleryMissingMeta}</span>`;
       });
@@ -715,8 +466,7 @@ const bindProfileLightbox = (copy) => {
   }
 
   const profileImage = elements.profileImage;
-  profileImage.alt =
-    currentLanguage === "ko" ? "최선효 프로필 사진" : "Profile photo of Seonhyo Choi";
+  profileImage.alt = "Profile photo of Seonhyo Choi";
 
   if (profileImage.dataset.lightboxBound === "true") {
     return;
@@ -751,36 +501,9 @@ const bindProfileLightbox = (copy) => {
   profileImage.dataset.lightboxBound = "true";
 };
 
-const monthMap = {
-  Jan: "01",
-  Feb: "02",
-  Mar: "03",
-  Apr: "04",
-  May: "05",
-  Jun: "06",
-  Jul: "07",
-  Aug: "08",
-  Sep: "09",
-  Oct: "10",
-  Nov: "11",
-  Dec: "12",
-};
-
 const getProjectSortKey = (project) => {
   if (project.sortKey) {
     return project.sortKey;
-  }
-
-  const koreanMatch = project.period?.match(/(\d{4})\.(\d{2})/);
-  if (koreanMatch) {
-    return `${koreanMatch[1]}-${koreanMatch[2]}`;
-  }
-
-  const englishMatch = project.period?.match(
-    /\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s+(\d{4})/
-  );
-  if (englishMatch) {
-    return `${englishMatch[2]}-${monthMap[englishMatch[1]]}`;
   }
 
   if (project.year) {
@@ -870,15 +593,18 @@ const renderProjectList = (projects, timelineElement, copy, options = {}) => {
       const aside = document.createElement("div");
       aside.className = "project-aside";
 
-      const period = document.createElement("p");
-      period.className = "project-period";
-      period.textContent = project.period;
-
       const team = document.createElement("p");
       team.className = "project-team";
       team.textContent = project.team;
 
-      aside.append(period, team);
+      if (project.period) {
+        const period = document.createElement("p");
+        period.className = "project-period";
+        period.textContent = project.period;
+        aside.append(period, team);
+      } else {
+        aside.append(team);
+      }
 
       if (project.link) {
         const link = document.createElement("a");
@@ -1046,11 +772,8 @@ const restoreOpenTimelineSections = (openIds) => {
 };
 
 const setLanguage = (language) => {
-  const nextLanguage = translations[language] ? language : "en";
-  const copy = translations[nextLanguage];
+  const copy = translations["en"];
   const openTimelineSectionIds = getOpenTimelineSectionIds();
-  currentLanguage = nextLanguage;
-  localStorage.setItem("portfolio-language", nextLanguage);
 
   document.documentElement.lang = copy.htmlLang;
   if (elements.title) {
@@ -1092,13 +815,6 @@ const setLanguage = (language) => {
   elements.contactDescription.textContent = copy.contactDescription;
   elements.footerText.textContent = copy.footerText.replace("{year}", String(year));
 
-  if (elements.langToggle) {
-    elements.langToggle.dataset.language = nextLanguage;
-    elements.langToggle.setAttribute(
-      "aria-label",
-      nextLanguage === "ko" ? "Switch to English" : "한국어로 전환"
-    );
-  }
   if (lightboxClose) {
     lightboxClose.setAttribute("aria-label", copy.lightboxClose);
   }
@@ -1145,13 +861,7 @@ const exitPrintMode = () => {
   detailsStateBeforePrint = [];
 };
 
-if (elements.langToggle) {
-  elements.langToggle.addEventListener("click", () => {
-    setLanguage(currentLanguage === "ko" ? "en" : "ko");
-  });
-}
-
-setLanguage(currentLanguage);
+setLanguage("en");
 
 const reveals = document.querySelectorAll(".reveal");
 

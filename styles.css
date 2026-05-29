@@ -24,10 +24,11 @@ body {
 
 html {
   background: var(--bg);
+  font-size: 1.2rem;
 }
 
 body {
-  font-family: "Noto Serif KR", "Apple SD Gothic Neo", "Malgun Gothic", serif;
+  font-family: "Cormorant Garamond", Georgia, serif;
   position: relative;
   background: #1b1612;
   color: var(--text);
@@ -60,7 +61,7 @@ h3,
 .eyebrow,
 .timeline-label,
 .project-period {
-  font-family: "Cormorant Garamond", "Noto Serif KR", serif;
+  font-family: "Cormorant Garamond", Georgia, serif;
   letter-spacing: 0.01em;
 }
 
@@ -99,51 +100,6 @@ h3,
 .container {
   width: min(1180px, calc(100% - 2.6rem));
   margin: 0 auto;
-}
-
-.topbar {
-  padding-top: 1.2rem;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.lang-toggle {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  padding: 0.45rem 0.85rem;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: rgba(255, 248, 238, 0.02);
-  color: var(--muted);
-  font: inherit;
-  cursor: pointer;
-  transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
-  backdrop-filter: blur(12px);
-}
-
-.lang-toggle:hover {
-  transform: translateY(-1px);
-  color: var(--text);
-  border-color: var(--line-strong);
-}
-
-.lang-toggle-label {
-  color: var(--accent);
-  font-weight: 700;
-}
-
-.lang-toggle[data-language="en"] .lang-toggle-label {
-  color: var(--muted);
-}
-
-.lang-toggle[data-language="en"] span:last-child {
-  color: var(--accent);
-  font-weight: 700;
-}
-
-.lang-toggle-separator {
-  color: rgba(178, 167, 155, 0.7);
 }
 
 .hero {
@@ -330,7 +286,7 @@ section {
 }
 
 #projects h2 {
-  font-size: clamp(2.3rem, 4.8vw, 3.4rem);
+  font-size: clamp(1.9rem, 4vw, 2.8rem);
   line-height: 0.94;
   letter-spacing: -0.02em;
 }
@@ -400,7 +356,7 @@ h2 {
   place-items: center;
   color: var(--muted);
   letter-spacing: 0.2em;
-  font-family: "Cormorant Garamond", "Noto Serif KR", serif;
+  font-family: "Cormorant Garamond", Georgia, serif;
   background:
     linear-gradient(135deg, rgba(255, 248, 238, 0.05), rgba(255, 248, 238, 0.01)),
     repeating-linear-gradient(45deg, rgba(255, 248, 238, 0.02), rgba(255, 248, 238, 0.02) 12px, transparent 12px, transparent 24px);
@@ -554,7 +510,7 @@ h2 {
 }
 
 .timeline-label {
-  font-size: clamp(2.6rem, 8vw, 5rem);
+  font-size: clamp(2.2rem, 6.5vw, 4.2rem);
   line-height: 0.88;
   color: var(--text);
 }
@@ -912,10 +868,6 @@ h2 {
     width: min(100%, calc(100% - 1.4rem));
   }
 
-  .topbar {
-    padding-top: 0.9rem;
-  }
-
   .hero {
     padding-top: 3.1rem;
   }
@@ -1026,7 +978,6 @@ h2 {
 
   .page-grain,
   .page-glow,
-  .topbar,
   .page-index,
   .hero-actions,
   .lightbox,
@@ -1087,8 +1038,7 @@ h2 {
 
   .timeline-count,
   .hero-highlight,
-  .project-link,
-  .lang-toggle {
+  .project-link {
     border-color: #c8c8c8 !important;
     color: #444444 !important;
   }
