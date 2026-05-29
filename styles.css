@@ -24,10 +24,11 @@ body {
 
 html {
   background: var(--bg);
+  font-size: 1.2rem;
 }
 
 body {
-  font-family: "Noto Serif KR", "Apple SD Gothic Neo", "Malgun Gothic", serif;
+  font-family: "Cormorant Garamond", Georgia, serif;
   position: relative;
   background: #1b1612;
   color: var(--text);
@@ -57,10 +58,9 @@ a {
 h1,
 h2,
 h3,
-.eyebrow,
 .timeline-label,
 .project-period {
-  font-family: "Cormorant Garamond", "Noto Serif KR", serif;
+  font-family: "Cormorant Garamond", Georgia, serif;
   letter-spacing: 0.01em;
 }
 
@@ -101,51 +101,6 @@ h3,
   margin: 0 auto;
 }
 
-.topbar {
-  padding-top: 1.2rem;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.lang-toggle {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  padding: 0.45rem 0.85rem;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: rgba(255, 248, 238, 0.02);
-  color: var(--muted);
-  font: inherit;
-  cursor: pointer;
-  transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
-  backdrop-filter: blur(12px);
-}
-
-.lang-toggle:hover {
-  transform: translateY(-1px);
-  color: var(--text);
-  border-color: var(--line-strong);
-}
-
-.lang-toggle-label {
-  color: var(--accent);
-  font-weight: 700;
-}
-
-.lang-toggle[data-language="en"] .lang-toggle-label {
-  color: var(--muted);
-}
-
-.lang-toggle[data-language="en"] span:last-child {
-  color: var(--accent);
-  font-weight: 700;
-}
-
-.lang-toggle-separator {
-  color: rgba(178, 167, 155, 0.7);
-}
-
 .hero {
   padding: 4.6rem 0 2.2rem;
 }
@@ -155,16 +110,6 @@ h3,
   height: 1px;
   background: var(--accent);
   margin-bottom: 1.2rem;
-}
-
-.eyebrow {
-  display: inline-block;
-  font-weight: 600;
-  color: var(--accent);
-  font-size: 0.95rem;
-  letter-spacing: 0.18em;
-  margin-bottom: 0.95rem;
-  text-transform: uppercase;
 }
 
 .hero h1 {
@@ -255,7 +200,7 @@ main {
 .page-index-title {
   margin: 0 0 0.9rem;
   color: var(--muted);
-  font-size: 0.8rem;
+  font-size: 1rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
 }
@@ -272,6 +217,7 @@ main {
   padding-left: 0.9rem;
   color: rgba(178, 167, 155, 0.78);
   text-decoration: none;
+  font-size: 1.2rem;
   transition: color 0.2s ease, transform 0.2s ease;
 }
 
@@ -330,7 +276,7 @@ section {
 }
 
 #projects h2 {
-  font-size: clamp(2.3rem, 4.8vw, 3.4rem);
+  font-size: clamp(1.9rem, 4vw, 2.8rem);
   line-height: 0.94;
   letter-spacing: -0.02em;
 }
@@ -400,7 +346,7 @@ h2 {
   place-items: center;
   color: var(--muted);
   letter-spacing: 0.2em;
-  font-family: "Cormorant Garamond", "Noto Serif KR", serif;
+  font-family: "Cormorant Garamond", Georgia, serif;
   background:
     linear-gradient(135deg, rgba(255, 248, 238, 0.05), rgba(255, 248, 238, 0.01)),
     repeating-linear-gradient(45deg, rgba(255, 248, 238, 0.02), rgba(255, 248, 238, 0.02) 12px, transparent 12px, transparent 24px);
@@ -413,12 +359,12 @@ h2 {
 }
 
 .profile-card strong {
-  font-size: 1.05rem;
+  font-size: 1.2rem;
 }
 
 .profile-card span {
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: 1.1rem;
 }
 
 .hero-lead {
@@ -554,13 +500,9 @@ h2 {
 }
 
 .timeline-label {
-  font-size: clamp(2.6rem, 8vw, 5rem);
+  font-size: clamp(1.6rem, 4vw, 2.8rem);
   line-height: 0.88;
   color: var(--text);
-}
-
-.timeline-label-section {
-  font-size: clamp(2.25rem, 6vw, 4.1rem);
 }
 
 .timeline-count {
@@ -611,7 +553,7 @@ h2 {
 
 .project-team {
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 .project-link {
@@ -622,7 +564,7 @@ h2 {
   margin-top: 0.25rem;
   color: var(--text);
   text-decoration: none;
-  font-size: 0.92rem;
+  font-size: 1rem;
 }
 
 .project-link::after {
@@ -912,10 +854,6 @@ h2 {
     width: min(100%, calc(100% - 1.4rem));
   }
 
-  .topbar {
-    padding-top: 0.9rem;
-  }
-
   .hero {
     padding-top: 3.1rem;
   }
@@ -941,9 +879,7 @@ h2 {
     font-size: clamp(2rem, 13vw, 3.2rem);
   }
 
-  .timeline-label-section {
-    font-size: clamp(1.95rem, 11vw, 2.8rem);
-  }
+
 
   .timeline-year-summary,
   .timeline-group-header {
@@ -1026,7 +962,6 @@ h2 {
 
   .page-grain,
   .page-glow,
-  .topbar,
   .page-index,
   .hero-actions,
   .lightbox,
@@ -1087,8 +1022,7 @@ h2 {
 
   .timeline-count,
   .hero-highlight,
-  .project-link,
-  .lang-toggle {
+  .project-link {
     border-color: #c8c8c8 !important;
     color: #444444 !important;
   }

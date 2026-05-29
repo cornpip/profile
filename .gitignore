@@ -9,3 +9,5 @@ Thumbs.db
 # Local screenshots and ad-hoc captures
 /*.png
 .codex
+
+.claude
