@@ -3,20 +3,17 @@ const translations = {
     htmlLang: "en",
     pageTitle: "Profile | cornpip",
     metaDescription: "Profile",
-    eyebrow: "AI SOFTWARE ENGINEER",
     heroTitle: "An engineer working across technology and business.",
     heroLead:
       "I am most motivated when building things that deliver clear value to users.",
     heroDescription: [
-      "I work end to end across system and architecture design, covering data design, model development, inference pipelines, and application implementation.",
-      "I also bring AI agent ideas into development, including workflow design, agent role composition, and skill usage.",
+      "Working across the AI pipeline, from data design and model development to inference and application implementation.",
+      "Also applying AI agents to development work, including workflow design, agent role composition, and skill usage.",
     ],
     heroHighlights: [
-      "Ownership",
       "Culture contribution",
       "Fast execution",
       "Data-driven problem framing",
-      "computer vision",
       "end-to-end",
       "product engineer",
       "ai native",
@@ -29,14 +26,14 @@ const translations = {
     profileRole: "Software Engineer | Computer Vision, On device AI, Flutter",
     aboutDescription: "",
     aboutItems: [
-      ["Strengths", "Camera and image processing, smartphone on-device AI, AI pipeline and model design"],
+      ["Strengths", "Optics and image processing, on-device AI, AI pipeline and model design, training data design"],
       ["Work Style", "Product ownership, data- and visualization-based discussion, modularizing repetitive work"],
     ],
     projectsHeading: "Projects",
     projectsIntro: "",
     personalProjectsHeading: "Side Projects",
     contactHeading: "Contact",
-    contactDescription: "For collaboration or project inquiries, reach out through the channels below.",
+    contactDescription: "Curious about my work, or looking for a fun collaboration or conversation? Feel free to reach out through any of the channels below.",
     footerText: "Copyright © 2026 cornpip",
     lightboxClose: "Close",
     lightboxPrev: "Previous image",
@@ -51,14 +48,13 @@ const translations = {
         year: "2026",
         sortOrder: 1,
         period: "2025 -",
-        team: "HealthCloud",
-        title: "Nailfold Capillary Analysis with On-Device AI",
+        team: "HealthCloud Co.,Ltd.",
+        title: "Nailfold Capillary Analysis",
         description:
-          "Developed a nailfold capillary analysis app, implementing the full flow on smartphone on-device AI from optical device integration to image acquisition, preprocessing, and AI inference.",
+          "Developed a nailfold capillary analysis app, implementing the full mobile on-device flow from optical device integration to image acquisition, preprocessing, and AI inference.",
         bullets: [
-          "Handled optical device integration in the app with WebSocket-based device control and MJPEG preview/capture",
-          "Connected preprocessing of captured images with a TFLite inference pipeline on-device",
-          "Developed a separate FFI-based image and tensor processing package reusable across Flutter apps",
+          "Integrated optical devices over both USB and Wi-Fi, supporting MJPEG preview and capture",
+          "Implemented preprocessing and AI inference pipeline for captured images",
           "Converted YOLO and PyTorch-based models to TFLite and mitigated quality loss by adjusting the backbone, hyperparameters, and quantization level",
         ],
         media: ["assets/projects/Capillaries/1.png"],
@@ -67,12 +63,12 @@ const translations = {
         year: "2025",
         sortOrder: 2,
         period: "",
-        team: "HealthCloud",
-        title: "On-Device Skin Analysis for RF/EMS Beauty Devices",
+        team: "HealthCloud Co.,Ltd.",
+        title: "Skin Analysis for RF/EMS Beauty Devices",
         description:
           "Developed a skin analysis app connected to RF and EMS beauty devices, implementing on-device AI models for facial-region extraction and skin condition analysis.",
         bullets: [
-          "Connected app and beauty-device usage flow through BLE integration",
+          "Integrated BLE to connect and communicate with RF/EMS beauty devices, driving the in-app device usage flow",
           "Extracted forehead, eye, cheek, and lip regions from facial landmarks and built a per-area analysis pipeline",
           "Provided wrinkle and hydration analysis by combining per-area preprocessing with AI inference",
         ],
@@ -80,17 +76,16 @@ const translations = {
       },
       {
         year: "2026",
-        sortOrder: 5,
+        sortOrder: 2,
         period: "2025 -",
-        team: "HealthCloud",
-        title: "AI Skin and Scalp Analysis App",
+        team: "HealthCloud Co.,Ltd.",
+        title: "Skin and Scalp Analysis",
         description:
-          "Developed a skin and scalp analysis app. I designed AI models for five skin analysis categories and trained them with strategies tailored to limited and imbalanced data.",
+          "Developed a skin and scalp analysis app, implementing the full mobile on-device flow from optical device integration to image acquisition, preprocessing, and AI inference.",
         bullets: [
-          "Designed and trained ResNet classification models and UNet segmentation models for skin analysis",
-          "Implemented hair-thickness analysis by detecting pores with YOLO and separating hair regions with a segmentation model",
-          "Handled native feature control with MethodChannel and addressed network constraints with Wi-Fi and cellular switching logic",
-          "Implemented customer management and analysis history features with SQLite",
+          "Designed and trained classification and segmentation models for skin analysis",
+          "Implemented preprocessing and AI inference pipeline for captured images",
+          "Converted YOLO and PyTorch-based models to TFLite and mitigated quality loss by adjusting the backbone, hyperparameters, and quantization level",
         ],
         media: [
           "assets/projects/Bellus/1.png",
@@ -101,21 +96,20 @@ const translations = {
       {
         year: "2024",
         period: "",
-        team: "HealthCloud",
-        title: "Face Recognition Attendance for Care Facilities",
+        team: "HealthCloud Co.,Ltd.",
+        title: "Face Recognition Attendance",
         description:
           "Developed a smartphone-based face recognition attendance service.",
         bullets: [
           "Built a smartphone face-recognition pipeline with ML Kit-based face ROI detection",
           "Extracted MobileFaceNet embeddings, sent them to the server, and identified users by comparing them with vectors stored in the database",
-          "Designed session authentication, role-based access control, and APIs for service operations",
         ],
         media: ["assets/projects/CNear Hello Check/1.png", "assets/projects/CNear Hello Check/2.png"],
       },
       {
         year: "2024",
         period: "",
-        team: "HealthCloud",
+        team: "HealthCloud Co.,Ltd.",
         title: "Pothole Management Solution",
         description:
           "Processed pothole data collected by vehicles on the server and built a dashboard to visualize it by administrative area.",
@@ -128,7 +122,7 @@ const translations = {
       {
         year: "2024",
         period: "",
-        team: "Keyworks",
+        team: "Keyworks Co.,Ltd.",
         title: "Seaweed Foreign-Material Inspection",
         description:
           "Designed dataset composition and validation strategy for training a foreign-material detection model for seaweed inspection.",
@@ -141,10 +135,10 @@ const translations = {
       {
         year: "2023",
         period: "",
-        team: "HealthCloud",
-        title: "Pet Portrait Generation Service for Illustrators",
+        team: "HealthCloud Co.,Ltd.",
+        title: "Pet Image Generation",
         description:
-          "Built a pet image generation workflow and serving stack and delivered it as a service.",
+          "Developed a Stable Diffusion-based pet image generation workflow to reduce illustrators' workload, and delivered it as a service.",
         bullets: [
           "Relayed ComfyUI workflows through a Spring server and implemented multi-client handling and scheduling",
           "Reproduced artist-specific style through LoRA training",
@@ -158,7 +152,7 @@ const translations = {
       {
         year: "2022",
         period: "",
-        team: "NextLab",
+        team: "NextLab Co.,Ltd.",
         title: "Btv UI Navigation Algorithm Enhancement",
         description:
           "Improved the navigation algorithm with a classification model and visualized UI navigation paths to analyze false positives.",
@@ -172,13 +166,13 @@ const translations = {
       {
         year: "2021",
         period: "",
-        team: "Competition Entry",
+        team: "Challenge",
         title: "AR Driving Route Guide",
         description:
-          "Released an Android app for AR-based driving route guidance.",
+          "Provides AR lane guidance for complex or unclear road environments.",
         bullets: [
-          "Analyzed and integrated Mapbox Vision SDK for lane and traffic-light recognition R&D",
-          "Received an encouragement award at the Regional XR Challenge",
+          "Integrated Mapbox Vision SDK on Android",
+          "Traffic-light detection and image processing R&D",
         ],
         media: [
           "assets/projects/이 길 맞는교/1.jpg",
@@ -190,18 +184,15 @@ const translations = {
       {
         year: "2026",
         sortKey: "2026-01",
-        sortOrder: 2,
+        sortOrder: 3,
         period: "",
-        team: "Side Project",
-        title: "Flutter Plugin for UVC Camera Access on Android",
+        team: "",
+        title: "UVC Camera Access Plugin for Flutter",
         description:
-          "Developed a Flutter FFI plugin that enables UVC camera access on Android via libuvc bindings, supporting live preview, frame capture, and camera control.",
+          "Enables UVC camera access on Android via libuvc bindings, supporting live preview, frame capture, and camera control.",
         bullets: [
           "Bridged Android USB Host API, libusb, and libuvc across three layers to handle device discovery, USB communication, and UVC protocol",
-          "Implemented texture-based live preview to stream frames to Flutter widgets without excessive data copying",
-          "Exposed raw frame bytes to Dart for capture and image processing pipelines",
           "Supported camera parameter control including focus, pan, tilt, and exposure, with stream diagnostics for FPS and dropped frames",
-          "Published on pub.dev with arm64-v8a, armeabi-v7a, and x86_64 ABI support",
         ],
         link: "https://pub.dev/packages/flutter_ffi_uvc",
         linkLabel: "View pub.dev",
@@ -210,16 +201,16 @@ const translations = {
       {
         year: "2026",
         sortKey: "2026-00",
-        sortOrder: 3,
+        sortOrder: 4,
         period: "2025 -",
-        team: "Side Project",
-        title: "Flutter Package for On-Device Facial Landmark Extraction",
+        team: "",
+        title: "Facial Landmark Extraction Plugin for Flutter",
         description:
-          "Developed a Flutter package for extracting facial landmarks with the MediaPipe Face Mesh model.",
+          "Extracts facial landmarks on-device using the MediaPipe Face Mesh model.",
         bullets: [
-          "Designed the package as an FFI plugin and handled core computation in C++",
-          "Built Android and iOS TFLite binaries directly, then selectively adapted the required C API headers and implementations to run model inference in the C++ layer",
-          "Published on pub.dev with iOS and Android support",
+          "Bundles MediaPipe face models — Face Mesh, Iris, and Detection (short-range, full-range dense, and full-range sparse)",
+          "Links TFLite C API binaries directly for model inference in the C layer, with no dependency on external TFLite packages",
+          "Provides a combined detection and mesh inference API, with stream support for real-time processing",
         ],
         link: "https://pub.dev/packages/mediapipe_face_mesh",
         linkLabel: "View pub.dev",
@@ -230,7 +221,7 @@ const translations = {
         sortKey: "2025-08",
         sortOrder: 4,
         period: "",
-        team: "Side Project",
+        team: "",
         title: "Mediapipe Landmark 3D Viewer",
         description:
           "Developed a 3D interactive visualization viewer for inspecting landmark points intuitively.",
@@ -246,14 +237,14 @@ const translations = {
         year: "2024",
         sortKey: "2024-12",
         period: "",
-        team: "Side Project",
-        title: "Self-Hosted OpenAI Chat with Token Tracking and AI Editing",
+        team: "",
+        title: "Self-Hosted OpenAI Chat Client",
         description:
           "Implemented a Docker-based system that lets users work with the OpenAI API locally in a ChatGPT-like flow.",
         bullets: [
           "Stored conversation histories locally and exposed token usage for each history",
           "Crawled linked webpages and reflected BART-based summaries into chats",
-          "Implemented an editing feature by integrating SAM2 mask generation with the OpenAI Inpainting API",
+          "Features image editing through SAM segmentation combined with the OpenAI Inpainting API",
         ],
         link: "https://github.com/cornpip/TokenMeter",
         linkLabel: "View GitHub",
@@ -289,7 +280,6 @@ const translations = {
 const elements = {
   title: document.querySelector("title"),
   metaDescription: document.querySelector('meta[name="description"]'),
-  eyebrow: document.getElementById("eyebrow"),
   heroTitle: document.getElementById("heroTitle"),
   heroLead: document.getElementById("heroLead"),
   heroDescription: document.getElementById("heroDescription"),
@@ -539,7 +529,7 @@ const renderProjectList = (projects, timelineElement, copy, options = {}) => {
   timelineElement.textContent = "";
   projectCards.length = 0;
 
-  const { groupedByYear = false, groupedByField = "", singleGroupLabel = "" } = options;
+  const { groupedByYear = false, groupedByField = "" } = options;
   const groups = groupedByYear
     ? Array.from(
         projects.reduce((map, project) => {
@@ -550,8 +540,6 @@ const renderProjectList = (projects, timelineElement, copy, options = {}) => {
           return map;
         }, new Map())
       ).sort((a, b) => Number(b[0]) - Number(a[0]))
-    : singleGroupLabel
-      ? [[singleGroupLabel, projects]]
     : groupedByField
       ? Array.from(
           projects.reduce((map, project) => {
@@ -565,23 +553,22 @@ const renderProjectList = (projects, timelineElement, copy, options = {}) => {
     : [["all", projects]];
 
   groups.forEach(([groupLabel, groupProjects]) => {
-    const isGroupedPanel = groupedByYear || Boolean(groupedByField) || Boolean(singleGroupLabel);
-    const mount = groupedByYear || singleGroupLabel ? document.createElement("details") : isGroupedPanel ? document.createElement("section") : timelineElement;
+    const isGroupedPanel = groupedByYear || Boolean(groupedByField);
+    const mount = groupedByYear ? document.createElement("details") : isGroupedPanel ? document.createElement("section") : timelineElement;
     let target = timelineElement;
 
     if (isGroupedPanel) {
-      mount.className = groupedByYear || singleGroupLabel ? "timeline-year" : "timeline-group";
+      mount.className = groupedByYear ? "timeline-year" : "timeline-group";
       if (groupedByYear) {
         mount.id = `archive-${String(groupLabel).toLowerCase()}`;
       }
-      const header = groupedByYear || singleGroupLabel ? document.createElement("summary") : document.createElement("div");
-      header.className = groupedByYear || singleGroupLabel ? "timeline-year-summary" : "timeline-group-header";
-      const labelClass = singleGroupLabel ? "timeline-label timeline-label-section" : "timeline-label";
-      header.innerHTML = `<span class="timeline-heading"><span class="timeline-toggle" aria-hidden="true"></span><span class="${labelClass}">${groupLabel}</span><span class="timeline-count">(${groupProjects.length})</span></span>`;
+      const header = groupedByYear ? document.createElement("summary") : document.createElement("div");
+      header.className = groupedByYear ? "timeline-year-summary" : "timeline-group-header";
+      header.innerHTML = `<span class="timeline-heading"><span class="timeline-toggle" aria-hidden="true"></span><span class="timeline-label">${groupLabel}</span><span class="timeline-count">(${groupProjects.length})</span></span>`;
       mount.appendChild(header);
 
       target = document.createElement("div");
-      target.className = groupedByYear || singleGroupLabel ? "timeline-year-content" : "timeline-group-content";
+      target.className = groupedByYear ? "timeline-year-content" : "timeline-group-content";
       mount.appendChild(target);
       timelineElement.appendChild(mount);
     }
@@ -593,16 +580,17 @@ const renderProjectList = (projects, timelineElement, copy, options = {}) => {
       const aside = document.createElement("div");
       aside.className = "project-aside";
 
-      const team = document.createElement("p");
-      team.className = "project-team";
-      team.textContent = project.team;
-
       if (project.period) {
         const period = document.createElement("p");
         period.className = "project-period";
         period.textContent = project.period;
-        aside.append(period, team);
-      } else {
+        aside.append(period);
+      }
+
+      if (project.team) {
+        const team = document.createElement("p");
+        team.className = "project-team";
+        team.textContent = project.team;
         aside.append(team);
       }
 
@@ -771,9 +759,24 @@ const restoreOpenTimelineSections = (openIds) => {
   });
 };
 
+const TIMELINE_STORAGE_KEY = "openTimelineSections";
+
+const saveOpenTimelineSections = () => {
+  localStorage.setItem(TIMELINE_STORAGE_KEY, JSON.stringify(getOpenTimelineSectionIds()));
+};
+
+const loadOpenTimelineSections = () => {
+  try {
+    return JSON.parse(localStorage.getItem(TIMELINE_STORAGE_KEY)) || [];
+  } catch {
+    return [];
+  }
+};
+
 const setLanguage = (language) => {
   const copy = translations["en"];
-  const openTimelineSectionIds = getOpenTimelineSectionIds();
+  const domOpenIds = getOpenTimelineSectionIds();
+  const openTimelineSectionIds = domOpenIds.length > 0 ? domOpenIds : loadOpenTimelineSections();
 
   document.documentElement.lang = copy.htmlLang;
   if (elements.title) {
@@ -783,7 +786,6 @@ const setLanguage = (language) => {
     elements.metaDescription.setAttribute("content", copy.metaDescription);
   }
 
-  elements.eyebrow.textContent = copy.eyebrow;
   elements.heroTitle.innerHTML = copy.heroTitle;
   elements.heroLead.textContent = copy.heroLead;
   elements.heroDescription.replaceChildren();
@@ -833,6 +835,9 @@ const setLanguage = (language) => {
   bindProfileLightbox(copy);
   renderProjectList(getAllProjects(copy), elements.projectsTimeline, copy, { groupedByYear: true });
   restoreOpenTimelineSections(openTimelineSectionIds);
+  document.querySelectorAll("#projects details.timeline-year").forEach((detail) => {
+    detail.addEventListener("toggle", saveOpenTimelineSections);
+  });
   renderArchiveIndex(copy);
   renderLightbox();
 };

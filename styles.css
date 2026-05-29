@@ -58,7 +58,6 @@ a {
 h1,
 h2,
 h3,
-.eyebrow,
 .timeline-label,
 .project-period {
   font-family: "Cormorant Garamond", Georgia, serif;
@@ -111,16 +110,6 @@ h3,
   height: 1px;
   background: var(--accent);
   margin-bottom: 1.2rem;
-}
-
-.eyebrow {
-  display: inline-block;
-  font-weight: 600;
-  color: var(--accent);
-  font-size: 0.95rem;
-  letter-spacing: 0.18em;
-  margin-bottom: 0.95rem;
-  text-transform: uppercase;
 }
 
 .hero h1 {
@@ -211,7 +200,7 @@ main {
 .page-index-title {
   margin: 0 0 0.9rem;
   color: var(--muted);
-  font-size: 0.8rem;
+  font-size: 1rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
 }
@@ -228,6 +217,7 @@ main {
   padding-left: 0.9rem;
   color: rgba(178, 167, 155, 0.78);
   text-decoration: none;
+  font-size: 1.2rem;
   transition: color 0.2s ease, transform 0.2s ease;
 }
 
@@ -369,12 +359,12 @@ h2 {
 }
 
 .profile-card strong {
-  font-size: 1.05rem;
+  font-size: 1.2rem;
 }
 
 .profile-card span {
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: 1.1rem;
 }
 
 .hero-lead {
@@ -510,13 +500,9 @@ h2 {
 }
 
 .timeline-label {
-  font-size: clamp(2.2rem, 6.5vw, 4.2rem);
+  font-size: clamp(1.6rem, 4vw, 2.8rem);
   line-height: 0.88;
   color: var(--text);
-}
-
-.timeline-label-section {
-  font-size: clamp(2.25rem, 6vw, 4.1rem);
 }
 
 .timeline-count {
@@ -567,7 +553,7 @@ h2 {
 
 .project-team {
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 .project-link {
@@ -578,7 +564,7 @@ h2 {
   margin-top: 0.25rem;
   color: var(--text);
   text-decoration: none;
-  font-size: 0.92rem;
+  font-size: 1rem;
 }
 
 .project-link::after {
@@ -893,9 +879,7 @@ h2 {
     font-size: clamp(2rem, 13vw, 3.2rem);
   }
 
-  .timeline-label-section {
-    font-size: clamp(1.95rem, 11vw, 2.8rem);
-  }
+
 
   .timeline-year-summary,
   .timeline-group-header {
