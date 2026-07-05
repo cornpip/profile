@@ -33,7 +33,7 @@ const translations = {
     projectsIntro: "",
     personalProjectsHeading: "Side Projects",
     contactHeading: "Contact",
-    contactDescription: "Curious about my work, or looking for a fun collaboration or conversation? Feel free to reach out through any of the channels below.",
+    contactDescription: "Curious about my work, or looking for a fun collaboration or conversation? You can find all the ways to reach me on my GitHub profile.",
     footerText: "Copyright © 2026 cornpip",
     lightboxClose: "Close",
     lightboxPrev: "Previous image",
