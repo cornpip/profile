@@ -808,6 +808,14 @@ h2 {
   transform: translateY(0);
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
 @media (max-width: 900px) {
   .page-layout {
     grid-template-columns: 1fr;
@@ -1039,6 +1047,12 @@ h2 {
   #aboutDescription,
   .footer {
     color: #555555 !important;
+  }
+
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
   }
 
   .project-image-slot,

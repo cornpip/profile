@@ -1,6 +1,5 @@
 const translations = {
   en: {
-    htmlLang: "en",
     pageTitle: "Profile | cornpip",
     metaDescription: "Profile",
     heroTitle: "An engineer working across technology and business.",
@@ -31,10 +30,9 @@ const translations = {
     ],
     projectsHeading: "Projects",
     projectsIntro: "",
-    personalProjectsHeading: "Side Projects",
     contactHeading: "Contact",
     contactDescription: "Curious about my work, or looking for a fun collaboration or conversation? You can find all the ways to reach me on my GitHub profile.",
-    footerText: "Copyright © 2026 cornpip",
+    footerText: "Copyright © {year} cornpip",
     lightboxClose: "Close",
     lightboxPrev: "Previous image",
     lightboxNext: "Next image",
@@ -196,7 +194,7 @@ const translations = {
         ],
         link: "https://pub.dev/packages/flutter_ffi_uvc",
         linkLabel: "View pub.dev",
-        media: ["assets/projects/ffi_flutter_uvc/1.png"],
+        media: ["assets/projects/ffi_flutter_uvc/1.jpg"],
       },
       {
         year: "2026",
@@ -312,7 +310,6 @@ const lightboxPrev = document.getElementById("lightboxPrev");
 const lightboxNext = document.getElementById("lightboxNext");
 let activeImages = [];
 let activeIndex = 0;
-const currentLanguage = "en";
 let detailsStateBeforePrint = [];
 let archiveSections = [];
 
@@ -320,7 +317,7 @@ const renderLightbox = () => {
   if (!lightboxImage || !lightboxIndicator || activeImages.length === 0) {
     return;
   }
-  const copy = translations[currentLanguage];
+  const copy = translations.en;
   lightboxImage.src = activeImages[activeIndex].src;
   lightboxImage.alt = activeImages[activeIndex].alt || copy.lightboxImageAlt;
   lightboxIndicator.textContent = `${activeIndex + 1} / ${activeImages.length}`;
@@ -521,7 +518,7 @@ const getAllProjects = (copy) =>
       return a.originalIndex - b.originalIndex;
     });
 
-const renderProjectList = (projects, timelineElement, copy, options = {}) => {
+const renderProjectList = (projects, timelineElement, copy) => {
   if (!timelineElement) {
     return;
   }
@@ -529,49 +526,30 @@ const renderProjectList = (projects, timelineElement, copy, options = {}) => {
   timelineElement.textContent = "";
   projectCards.length = 0;
 
-  const { groupedByYear = false, groupedByField = "" } = options;
-  const groups = groupedByYear
-    ? Array.from(
-        projects.reduce((map, project) => {
-          const year = project.year || "Other";
-          const items = map.get(year) || [];
-          items.push(project);
-          map.set(year, items);
-          return map;
-        }, new Map())
-      ).sort((a, b) => Number(b[0]) - Number(a[0]))
-    : groupedByField
-      ? Array.from(
-          projects.reduce((map, project) => {
-            const label = project[groupedByField] || "Other";
-            const items = map.get(label) || [];
-            items.push(project);
-            map.set(label, items);
-            return map;
-          }, new Map())
-        )
-    : [["all", projects]];
+  const groups = Array.from(
+    projects.reduce((map, project) => {
+      const year = project.year || "Other";
+      const items = map.get(year) || [];
+      items.push(project);
+      map.set(year, items);
+      return map;
+    }, new Map())
+  ).sort((a, b) => Number(b[0]) - Number(a[0]));
 
   groups.forEach(([groupLabel, groupProjects]) => {
-    const isGroupedPanel = groupedByYear || Boolean(groupedByField);
-    const mount = groupedByYear ? document.createElement("details") : isGroupedPanel ? document.createElement("section") : timelineElement;
-    let target = timelineElement;
+    const mount = document.createElement("details");
+    mount.className = "timeline-year";
+    mount.id = `archive-${String(groupLabel).toLowerCase()}`;
 
-    if (isGroupedPanel) {
-      mount.className = groupedByYear ? "timeline-year" : "timeline-group";
-      if (groupedByYear) {
-        mount.id = `archive-${String(groupLabel).toLowerCase()}`;
-      }
-      const header = groupedByYear ? document.createElement("summary") : document.createElement("div");
-      header.className = groupedByYear ? "timeline-year-summary" : "timeline-group-header";
-      header.innerHTML = `<span class="timeline-heading"><span class="timeline-toggle" aria-hidden="true"></span><span class="timeline-label">${groupLabel}</span><span class="timeline-count">(${groupProjects.length})</span></span>`;
-      mount.appendChild(header);
+    const header = document.createElement("summary");
+    header.className = "timeline-year-summary";
+    header.innerHTML = `<span class="timeline-heading"><span class="timeline-toggle" aria-hidden="true"></span><span class="timeline-label">${groupLabel}</span><span class="timeline-count">(${groupProjects.length})</span></span>`;
+    mount.appendChild(header);
 
-      target = document.createElement("div");
-      target.className = groupedByYear ? "timeline-year-content" : "timeline-group-content";
-      mount.appendChild(target);
-      timelineElement.appendChild(mount);
-    }
+    const target = document.createElement("div");
+    target.className = "timeline-year-content";
+    mount.appendChild(target);
+    timelineElement.appendChild(mount);
 
     groupProjects.forEach((project) => {
       const card = document.createElement("article");
@@ -762,7 +740,11 @@ const restoreOpenTimelineSections = (openIds) => {
 const TIMELINE_STORAGE_KEY = "openTimelineSections";
 
 const saveOpenTimelineSections = () => {
-  localStorage.setItem(TIMELINE_STORAGE_KEY, JSON.stringify(getOpenTimelineSectionIds()));
+  try {
+    localStorage.setItem(TIMELINE_STORAGE_KEY, JSON.stringify(getOpenTimelineSectionIds()));
+  } catch {
+    // Storage unavailable (blocked/full); open state just won't persist.
+  }
 };
 
 const loadOpenTimelineSections = () => {
@@ -773,12 +755,11 @@ const loadOpenTimelineSections = () => {
   }
 };
 
-const setLanguage = (language) => {
-  const copy = translations["en"];
+const render = () => {
+  const copy = translations.en;
   const domOpenIds = getOpenTimelineSectionIds();
   const openTimelineSectionIds = domOpenIds.length > 0 ? domOpenIds : loadOpenTimelineSections();
 
-  document.documentElement.lang = copy.htmlLang;
   if (elements.title) {
     elements.title.textContent = copy.pageTitle;
   }
@@ -802,9 +783,6 @@ const setLanguage = (language) => {
   elements.heroDescription.hidden = heroDescriptionParagraphs.length === 0;
   elements.heroProjectsLink.textContent = copy.heroProjectsLink;
   elements.heroContactLink.textContent = copy.heroContactLink;
-  if (elements.archiveIndexTitle) {
-    elements.archiveIndexTitle.textContent = copy.archiveIndexTitle;
-  }
   elements.aboutHeading.textContent = copy.aboutHeading;
   elements.profileName.textContent = copy.profileName;
   elements.profileRole.textContent = copy.profileRole;
@@ -833,7 +811,7 @@ const setLanguage = (language) => {
   renderHeroHighlights(copy);
   renderAboutList(copy);
   bindProfileLightbox(copy);
-  renderProjectList(getAllProjects(copy), elements.projectsTimeline, copy, { groupedByYear: true });
+  renderProjectList(getAllProjects(copy), elements.projectsTimeline, copy);
   restoreOpenTimelineSections(openTimelineSectionIds);
   document.querySelectorAll("#projects details.timeline-year").forEach((detail) => {
     detail.addEventListener("toggle", saveOpenTimelineSections);
@@ -843,6 +821,11 @@ const setLanguage = (language) => {
 };
 
 const enterPrintMode = () => {
+  // Both matchMedia("print") and beforeprint can fire for one print action;
+  // guard so the second call doesn't snapshot the already-forced-open state.
+  if (document.body.classList.contains("print-mode")) {
+    return;
+  }
   document.body.classList.add("print-mode");
   document.querySelectorAll(".reveal").forEach((section) => {
     section.classList.add("show");
@@ -866,7 +849,7 @@ const exitPrintMode = () => {
   detailsStateBeforePrint = [];
 };
 
-setLanguage("en");
+render();
 
 const reveals = document.querySelectorAll(".reveal");
 
@@ -879,10 +862,29 @@ const observer = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.14 }
+  { threshold: 0, rootMargin: "0px 0px -10% 0px" }
 );
 
 reveals.forEach((section) => observer.observe(section));
+
+// The observer's rootMargin excludes the bottom 10% of the viewport, so a
+// short trailing section can sit entirely inside that band at maximum scroll
+// and never intersect; force-show whatever remains once the page bottom is reached.
+const revealRemainingAtPageEnd = () => {
+  const scrolledToBottom =
+    window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+  if (!scrolledToBottom) {
+    return;
+  }
+  reveals.forEach((section) => {
+    if (!section.classList.contains("show")) {
+      section.classList.add("show");
+      observer.unobserve(section);
+    }
+  });
+};
+
+window.addEventListener("scroll", revealRemainingAtPageEnd, { passive: true });
 
 window.addEventListener("scroll", updateArchiveSpy, { passive: true });
 window.addEventListener("resize", updateArchiveSpy);
