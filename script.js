@@ -31,7 +31,7 @@ const translations = {
     projectsHeading: "Projects",
     projectsIntro: "",
     contactHeading: "Contact",
-    contactDescription: "Curious about my work, or looking for a fun collaboration or conversation? You can find all the ways to reach me on my GitHub profile.",
+    contactDescription: "Curious about my work, or looking for a fun collaboration or conversation? Feel free to reach out through any of the channels below.",
     footerText: "Copyright © {year} cornpip",
     lightboxClose: "Close",
     lightboxPrev: "Previous image",

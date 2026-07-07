@@ -719,10 +719,19 @@ h2 {
 }
 
 .contact-grid a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.42rem;
   color: var(--text);
   text-decoration: none;
   border-bottom: 1px solid rgba(212, 163, 115, 0.5);
   padding-bottom: 0.08rem;
+}
+
+.contact-icon {
+  width: 1.05em;
+  height: 1.05em;
+  flex-shrink: 0;
 }
 
 .footer {
